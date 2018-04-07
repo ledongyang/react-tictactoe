@@ -11,5 +11,5 @@ const Routes = () => {
       <Route path='/profile' component={Profile} />
     </App>
   );
-}
+};
 export default Routes;
