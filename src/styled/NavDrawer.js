@@ -7,6 +7,7 @@ const StayVisible = styled.div`
   position: absolute;
   margin-left: ${(props) => (props.open ? `${props.width}px` : 'none')};
   transition: margin 0.2s;
+  z-index: 1;
 `
 
 export const NavToggleButton = (props) => {

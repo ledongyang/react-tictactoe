@@ -1,13 +1,13 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
 import App from '../containers/App';
-import Home from '../containers/Home';
+import TicTacToe from '../containers/TicTacToe';
 import Profile from '../containers/Profile';
 
 const Routes = () => {
   return (
     <App>
-      <Route exact path='/' component={Home} />
+      <Route exact path='/' component={TicTacToe} />
       <Route path='/profile' component={Profile} />
     </App>
   );
