@@ -1,8 +1,8 @@
 import React from 'react';
 import {Route} from 'react-router-dom';
-import App from '../components/App';
-import Home from '../components/Home';
-import Profile from '../components/Profile';
+import App from '../containers/App';
+import Home from '../containers/Home';
+import Profile from '../containers/Profile';
 
 const Routes = () => {
   return (

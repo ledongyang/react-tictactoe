@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import RaisedButton from 'material-ui/RaisedButton';
+import NavDrawer from '../components/NavDrawer';
+import {Header, Main} from '../styled/App';
 
 injectTapEventPlugin();
 class App extends Component {
@@ -9,17 +10,13 @@ class App extends Component {
     return (
       <MuiThemeProvider>
         <div className='app'>
-          <header>
-            <h1>TicTacToe</h1>
-            <RaisedButton
-              label='Primary'
-              primary={true}
-              onTouchTap={() => {}}
-            />
-          </header>
-          <main>
+          <Header>
+            React Tic Tac Toe
+          </Header>
+          <NavDrawer/>
+          <Main>
             {this.props.children}
-          </main>
+          </Main>
         </div>
       </MuiThemeProvider>
     );
