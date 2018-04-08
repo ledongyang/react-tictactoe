@@ -14,7 +14,7 @@ class App extends Component {
             <RaisedButton
               label='Primary'
               primary={true}
-              onTouchTap={() => {console.log('HELLO!')}}
+              onTouchTap={() => {}}
             />
           </header>
           <main>
