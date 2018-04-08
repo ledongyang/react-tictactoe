@@ -1,9 +1,26 @@
 import React from 'react';
 import {Layer, Line, Text} from 'react-konva';
 
-export const Squares = ({coordinates, ownMark, unit, move}) => {
+export const Squares = ({
+  coordinates,
+  gameState,
+  win,
+  gameOver,
+  yourTurn,
+  ownMark,
+  unit,
+  move
+}) => {
   let squares = coordinates.map((position, index) => {
+    let makeMove = move;
+    let mark = gameState[index];
     let fill = 'black';
+    if (win && win.includes(index)) {
+      fill = 'lightgreen';
+    }
+    if (gameOver || !yourTurn || mark) {
+      makeMove = () => console.log('Nope!')
+    }
     return <Text
             key={index}
             index={index}
@@ -12,10 +29,11 @@ export const Squares = ({coordinates, ownMark, unit, move}) => {
             fontSize={unit}
             width={unit}
             fill={fill}
+            text={mark}
             fontFamily={'Helvetica'}
             align={'center'}
             onClick={(event) => {
-              move(event.target.index, ownMark);
+              makeMove(event.target.index, ownMark);
             }}
            />
   })
