@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import {Link} from 'react-router';
 import {Drawer, Divider, MenuItem} from 'material-ui';
 import {NavToggleButton} from '../styled/NavDrawer'
 
